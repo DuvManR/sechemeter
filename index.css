@@ -1,0 +1,246 @@
+:root {
+            --primary-color: #4CAF50;
+            --secondary-color: #45a049;
+            --font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: var(--font-family);
+            color: #333;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: none;
+        }
+        .form.active {
+            display: block;
+        }
+        .container.active {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            direction: rtl;
+            position: relative;
+
+            justify-content: center;  /* Center content vertically */
+            height: 100%;  /* Adjust as necessary */
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        select {
+            cursor: pointer;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            text-align-last: center;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+            transform: translateY(0);
+        }
+
+        input[type="number"], select {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="number"]:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        .scrollbox-formgroup{
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        select, input, button {
+            margin: 10px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            max-width: 480px;
+        }
+
+        #result {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            margin-top: 10px;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #ImageContainer {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+
+            input[type="number"], select {
+                font-size: 18px;
+            }
+        }
+
+        /* Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) #f0f0f0;
+        }
+
+        /* Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #f0f0f0;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            border: 3px solid #f0f0f0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* .container {
+            display: none;
+        } */
+
+        /* The switch - the box around the slider */
+        .switch {
+            position: absolute;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            top: 20px;
+            right: 10px;
+        }
+        
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--primary-color);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+  
