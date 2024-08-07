@@ -187,6 +187,7 @@
             height: 34px;
             top: 20px;
             right: 10px;
+            z-index: 1000; /* Ensure the toggle button is on top */
         }
         
         /* Hide default HTML checkbox */
