@@ -32,7 +32,7 @@
             width: 100%;
             max-width: 600px;
             margin: 20px auto;
-            direction: rtl;
+/*             direction: rtl; */
             position: relative;
 
             justify-content: center;  /* Center content vertically */
