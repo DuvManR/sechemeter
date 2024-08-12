@@ -1,0 +1,79 @@
+<!-- BY DuvMan © -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECHEMETER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="sechem.css">
+    <link rel="stylesheet" href="bagrut.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" id="formSwitch">
+        <span class="slider round"></span>
+    </label>
+
+    <div id="sechem-form" class="container active">
+
+        <div class="scrollbox-formgroup">
+            <select id="sechem-universities" class="university-select">
+                <option value="default-uni" selected>בחירת מוסד לימודים</option>
+                <option value="TAU">תל אביב</option>
+                <option value="HUJI1">עברית (ראשוני)</option>
+                <option value="HUJI2">עברית (סופי)</option>
+                <option value="TECH">טכניון</option>
+                <option value="BGU">בן גוריון</option>
+                <option value="BIU">בר אילן</option>
+            </select>
+        </div>
+        <label for="bagrut" id="bagrutLabel">:(? - ?) ממוצע בגרות</label>
+        <input type="number" id="bagrut">
+        <label for="psycho" id="psychoLabel">:פסיכומטרי (800 - 200)</label>
+        <input type="number" id="psycho">
+        <button id="calcButton" title="לחץ לחישוב הסכם"><i class="fas fa-paper-plane"></i> חישוב סכם</button>
+        <div id="sechem-result" class="fade-in"></div> <!-- This div will display the result -->
+        <div id="ImageContainer">
+            <img id="logoImage" src="data:image/png;base64,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" alt="SECHEMETER" width="200" height="200">
+        </div>
+    </div>
+
+    <div id="bagrut-form" class="container">
+        <div class="scrollbox-formgroup">
+            <select id="bagrut-universities" class="university-select">
+                <option value="default-uni" selected>בחירת מוסד לימודים</option>
+                <option value="TAU">תל אביב</option>
+                <option value="HUJI">עברית</option>
+                <option value="TECH">טכניון</option>
+                <option value="BGU">בן גוריון</option>
+                <option value="BIU">בר אילן</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>בונוס</th>
+                    <th>סוג בחינה</th>
+                    <th>ציון</th>
+                    <th>יחידות</th>
+                    <th>מקצוע</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <button id="add-row-button">הוסף מקצוע</button>
+        <div id="bagrut-result" class="fade-in">ממוצע בגרות מיטבי: 0</div> <!-- This div will display the result -->
+    </div>
+    <script type="text/javascript" src="sechem.js"></script>
+    <script type="text/javascript" src="bagrut.js"></script>
+    <script>
+    </script>
+</body>
+</html>
