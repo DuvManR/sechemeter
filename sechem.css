@@ -155,7 +155,7 @@
             input[type="number"], select, .university-select, .table-select {
                 font-size: 20px !important;
                 padding: 12px !important;
-                width: 100% !important;
+                width: 50% !important;
                 text-align: center !important;
                 text-align-last: center !important;
                 -webkit-appearance: none;
