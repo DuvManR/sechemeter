@@ -183,6 +183,10 @@
                 appearance: none;
             }
 
+             .bagrut-table {
+              table-layout: auto !important;
+             }
+
             .switch {
 /*                 font-size: 18px; */
                 top: 5px;
