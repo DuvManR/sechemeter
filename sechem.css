@@ -152,7 +152,17 @@
                 padding: 15px;
             }
 
-            input[type="number"], select, .university-select, .table-select {
+            input[type="number"], .table-select {
+                font-size: 20px !important;
+                padding: 12px !important;
+                width: 100% !important;
+                text-align: center !important;
+                text-align-last: center !important;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+            .university-select {
                 font-size: 20px !important;
                 padding: 12px !important;
                 width: 50% !important;
@@ -161,6 +171,12 @@
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 appearance: none;
+            }
+
+            .bagrut-table th, .bagrut-table td {
+                min-width: 150px; /* Increase minimum width */
+                padding: 12px; /* Increase padding */
+                font-size: 16px; /* Adjust font size for better readability */
             }
 
             .switch {
