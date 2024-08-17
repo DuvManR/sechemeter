@@ -175,7 +175,7 @@
             }
 
             .bagrut-table th, .bagrut-table td {
-                min-width: 150px; /* Increase minimum width */
+                min-width: 250px; /* Increase minimum width */
                 padding: 12px; /* Increase padding */
 /*                 font-size: 16px; /* Adjust font size for better readability */ */
                 -webkit-appearance: none;
