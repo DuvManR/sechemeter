@@ -153,10 +153,14 @@
             }
 
             input[type="number"], select, .university-select, .table-select {
-                font-size: 20px; /* Increase font size for better visibility */
-                padding: 12px; /* Add more padding to improve touch accuracy */
-                width: 100%; /* Ensure select elements take full width */
-                text-align-last: center; /* Center align the selected option text */
+                font-size: 20px !important;
+                padding: 12px !important;
+                width: 100% !important;
+                text-align: center !important;
+                text-align-last: center !important;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
             }
 
             .switch {
