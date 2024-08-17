@@ -144,6 +144,7 @@
 
         @media screen and (max-width: 768px) {
             .container {
+                font-size: 18px;
                 padding: 10px;
             }
 
@@ -180,6 +181,7 @@
             }
 
             .switch {
+                font-size: 18px;
                 top: 5px;
                 right: 5px;
                 padding: 5px;
