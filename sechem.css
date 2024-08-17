@@ -143,9 +143,10 @@
         }
 
         @media screen and (max-width: 768px) {
-            .container {
+            .container.active {
 /*                 font-size: 18px; */
                 padding: 10px;
+                width: auto;
             }
 
             button {
