@@ -144,7 +144,7 @@
 
         @media screen and (max-width: 768px) {
             .container.active {
-/*                 padding: 10px; */
+                padding: 10px;
                 /* font-size: 18px; */
                 max-width: 100%; /* Allow container to take full width */
                 overflow-x: auto; /* Allow horizontal scrolling if needed */
