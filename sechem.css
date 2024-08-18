@@ -181,6 +181,10 @@
                 font-size: 16px; /* Adjust font size for better readability */
             }
 
+            .bagrut-table {
+                table-layout: auto !important;
+            }
+
             .switch {
                 /* font-size: 18px; */
                 top: 5px;
