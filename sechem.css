@@ -148,6 +148,8 @@
                 padding: 10px;
                 max-width: 100%; /* Allow container to take full width */
                 overflow-x: auto; /* Allow horizontal scrolling if needed */
+                box-sizing: border-box; /* Include padding and border in the element's total width and height */
+
             }
 
             button {
