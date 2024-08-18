@@ -144,10 +144,13 @@
 
         @media screen and (max-width: 768px) {
             .container.active {
-                padding: 10px;
+/*                 padding: 10px; */
                 /* font-size: 18px; */
                 max-width: 100%; /* Allow container to take full width */
                 overflow-x: auto; /* Allow horizontal scrolling if needed */
+            display: block; /* Ensure block-level display for better handling of overflow */
+                        box-sizing: border-box;
+
             }
 
             button {
@@ -184,6 +187,8 @@
 
             .bagrut-table {
                 table-layout: auto !important;
+                                width: 100%; /* Ensure table takes full width of container */
+        min-width: 600px; /* Minimum width to prevent collapsing */
             }
 
             .switch {
