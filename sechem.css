@@ -148,7 +148,7 @@
                 /* font-size: 18px; */
                 max-width: 100%; /* Allow container to take full width */
                 overflow-x: auto; /* Allow horizontal scrolling if needed */
-            display: block; /* Ensure block-level display for better handling of overflow */
+/*             display: block; /* Ensure block-level display for better handling of overflow */ */
                         box-sizing: border-box;
 
             }
