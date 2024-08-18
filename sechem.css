@@ -146,6 +146,8 @@
             .container.active {
 /*                 font-size: 18px; */
                 padding: 10px;
+                max-width: 100%; /* Allow container to take full width */
+                overflow-x: auto; /* Allow horizontal scrolling if needed */
             }
 
             button {
