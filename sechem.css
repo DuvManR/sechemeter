@@ -197,6 +197,7 @@
 
             .bagrut-table {
                  overflow-wrap: normal; /* Wrap long words within cells */
+                 table-layout: auto;
          
             }
 
