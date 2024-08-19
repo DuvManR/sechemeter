@@ -1,0 +1,333 @@
+:root {
+            --primary-color: #4CAF50;
+            --secondary-color: #45a049;
+            --table-border-color: #388e3c;
+            --table-text-color: #1b5e20;
+            --table-th-color: #4caf50;
+            --table-lines-color: #81c784;
+            --font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: var(--font-family);
+            color: #333;
+            background-color: #f0f0f0;
+            overflow-y: auto; /* Allow vertical scrolling */
+        }
+        .container {
+            display: none;
+        }
+        .container.active {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            /* direction: rtl; */
+            position: relative;
+
+            justify-content: center;  /* Center content vertically */
+            height: auto;  /* Adjust as necessary */
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .university-select {
+            cursor: pointer;
+            width: 100%;
+            padding: 10px;
+            font-family: var(--font-family);
+            border-radius: 4px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid #ccc; /* Light red border for inputs */
+            /* background-color: var(--primary-color); */
+        }
+
+        button:active {
+            background-color: var(--secondary-color);
+            transform: translateY(0);
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        /* , input:hover, select:hoverc */
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .scrollbox-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px; /* Space below */
+        }
+
+        .scrollbox-container select {
+            /* position: relative; */
+            width: 30%;
+            max-width: 480px; /* Adjust as needed */
+        }
+
+        input, button {
+            position: relative;
+            margin: 10px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            max-width: 480px;
+        }
+
+        #sechem-result {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        img {
+            margin-top: 30px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+                /* font-size: 18px; */
+                width: auto;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+
+            input[type="number"], .table-select {
+                /* font-size: 20px !important; */
+                padding: 12px !important;
+                width: 100% !important;
+                text-align: center !important;
+                text-align-last: center !important;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+            .university-select {
+                /* font-size: 20px !important; */
+                padding: 12px !important;
+                width: 50% !important;
+                text-align: center !important;
+                text-align-last: center !important;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+
+            .bagrut-table th, .bagrut-table td {
+                min-width: 150px; /* Increase minimum width */
+                padding: 12px; /* Increase padding */
+                font-size: 16px; /* Adjust font size for better readability */
+            }
+
+            .bagrut-table {
+                table-layout: auto !important;
+            }
+
+            .switch {
+                /* font-size: 18px; */
+                top: 5px;
+                right: 5px;
+                padding: 5px;
+            }
+        }
+
+        /* Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) #f0f0f0;
+        }
+
+        /* Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #f0f0f0;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            border: 3px solid #f0f0f0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s;
+            direction: rtl;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%; /* Ensure the container takes full width */
+            position: relative;
+        }
+    
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+        }
+        
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: .4s;
+            border-radius: 20px; /* Fully rounded corners */
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Ensure content stays inside */
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "ראשוני";
+            height: 85%;
+            width: 50%;
+            background-color: white;
+            border-radius: 20px; /* Make the toggle handle rounded */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--primary-color);
+            transition: 0.4s;
+            left: 2%;
+        }
+        
+        input:checked + .slider {
+            background-color: var(--primary-color);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(92%);
+            content: "סופי";
+        }
+        
+        .switch-frame-button {
+            background-color: var(--primary-color); /* Light red background for add button */
+            color: #ffffff; /* White text color */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: block;
+            width: 150px; /* Set a specific width to align with the column */
+            /* margin: 20px auto; Center horizontally and space from the table */
+            margin-bottom: 30px;
+        }
+
+
+        .sechem-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed; /* Fix the table layout to prevent overlap */
+            overflow-wrap: break-word; /* Wrap long words within cells */
+            border: 2px solid var(--table-border-color); /* Red border around the entire table */
+            background-color: #ffffff; /* White background for the table */
+        }
+        .sechem-table th, .sechem-table td {
+            border: none; /* Remove vertical lines */
+            padding: 8px;
+            text-align: center;
+            color: var(--table-text-color); /* Darker red text */
+            min-width: 100px; /* Set a minimum width for cells */
+            word-wrap: break-word; /* Ensure long words wrap within cells */
+            border-bottom: 1px solid var(--table-lines-color); /* Light green border between rows */
+            border-right: 1px solid var(--table-th-color); /* Light red border between header columns */
+        }
+        .sechem-table th {
+            background-color: var(--table-th-color); /* Light blue background for the header */
+        }
+        
