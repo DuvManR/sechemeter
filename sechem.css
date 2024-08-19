@@ -143,7 +143,7 @@
         }
 
         @media screen and (max-width: 768px) {
-            .container.active {
+            .container {
                 padding: 10px;
                 /* font-size: 18px; */
 /*                 max-width: 100%; /* Allow container to take full width */ */
