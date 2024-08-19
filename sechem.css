@@ -189,7 +189,7 @@
             .bagrut-table th, .bagrut-table td {
                 border: auto; /* Remove vertical lines */        
                 min-width: 200px; /* Increase minimum width */
-/*                 padding: 12px; */
+                padding: 0px;
                         /* Increase padding */
                 font-size: 16px; /* Adjust font size for better readability */
             }
