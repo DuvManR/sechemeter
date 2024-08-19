@@ -154,7 +154,7 @@
                 padding: 15px;
             }
 
-            input[type="number"], .table-select {
+            .input-table, .table-select {
                 /* font-size: 20px !important; */
                 padding: 12px !important;
                 width: 100% !important;
@@ -180,11 +180,7 @@
                 padding: 12px; /* Increase padding */
                 font-size: 16px; /* Adjust font size for better readability */
             }
-
-            .bagrut-table {
-                table-layout: auto !important;
-            }
-
+                    
             .switch {
                 /* font-size: 18px; */
                 top: 5px;
