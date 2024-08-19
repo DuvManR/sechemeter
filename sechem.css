@@ -186,11 +186,10 @@
             }
 
             .bagrut-table {
-                table-layout: auto !important;
+                table-layout: fixed !important;
             
                                 width: 80%; /* Ensure table takes full width of container */
         min-width: 600px; /* Minimum width to prevent collapsing */
-                        position: fixed;
             }
 
             .switch {
