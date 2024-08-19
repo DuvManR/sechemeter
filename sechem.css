@@ -157,7 +157,18 @@
             .table-input, .table-select {
                 /* font-size: 20px !important; */
                 padding: 12px !important;
-                width: 80% !important;
+                width: 50% !important;
+                text-align: center !important;
+                text-align-last: center !important;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+
+             .subject-input, .table-select {
+                /* font-size: 20px !important; */
+                padding: 12px !important;
+                width: 100% !important;
                 text-align: center !important;
                 text-align-last: center !important;
                 -webkit-appearance: none;
