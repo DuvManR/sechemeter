@@ -193,6 +193,10 @@
 
             }
 
+            .bagrut-table {
+                        overflow-wrap: noraml;
+            }
+
             .switch {
                 /* font-size: 18px; */
                 top: 5px;
