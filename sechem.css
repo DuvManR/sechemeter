@@ -156,7 +156,7 @@
 
             .table-input {
                 /* font-size: 20px !important; */
-/*                 padding: 12px !important; */
+                padding-block: 12px !important;
                 width: 50% !important;
                 text-align: center !important;
                 text-align-last: center !important;
