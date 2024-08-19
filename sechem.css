@@ -180,9 +180,9 @@
             }
 
             .bagrut-table th, .bagrut-table td {
-                min-width: 150px; /* Increase minimum width */
-                padding: 12px; /* Increase padding */
-                font-size: 16px; /* Adjust font size for better readability */
+                min-width: 120px; /* Increase minimum width */
+                padding: 10px; /* Increase padding */
+                font-size: 14px; /* Adjust font size for better readability */
             }
 
             .bagrut-table {
