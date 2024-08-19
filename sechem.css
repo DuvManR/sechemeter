@@ -154,7 +154,7 @@
                 padding: 15px;
             }
 
-            .table-input, .table-select {
+            .table-input {
                 /* font-size: 20px !important; */
                 padding: 12px !important;
                 width: 50% !important;
