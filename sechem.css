@@ -187,11 +187,13 @@
             }
 
             .bagrut-table th, .bagrut-table td {
-                border: auto; /* Remove vertical lines */        
+                border: none; /* Remove vertical lines */        
                 min-width: 200px; /* Increase minimum width */
                 padding: 0px;
                         /* Increase padding */
                 font-size: 16px; /* Adjust font size for better readability */
+            border-right: 1px solid var(--table-lines-color); /* Light green border between rows */
+
             }
 
             
