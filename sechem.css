@@ -190,11 +190,9 @@
                 min-width: 200px; /* Increase minimum width */
                 font-size: 16px; /* Adjust font size for better readability */
                 border-left:2px solid red;
+                word-wrap: normal; /* Ensure long words wrap within cells */
 
-            }
 
-            .bagrut-table {
-                        overflow-wrap: noraml;
             }
 
             .switch {
