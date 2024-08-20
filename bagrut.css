@@ -83,7 +83,7 @@
 }
 
 #rotate-message {
-    display: block;
+    display: none;
     background-color: #cce0ff; /* Light blue background for the header */
     color: #00264d; /* Darker red text */
     padding: 10px;
