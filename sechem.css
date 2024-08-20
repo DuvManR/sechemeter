@@ -143,11 +143,6 @@
         }
 
         @media screen and (max-width: 768px) {
-            /* .container {
-                padding: 10px;
-                font-size: 18px;
-                width: auto;
-            } */
 
             button {
                 width: 100%;
