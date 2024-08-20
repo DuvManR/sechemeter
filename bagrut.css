@@ -101,3 +101,9 @@
     height: 100px; 
     margin: auto;
   }
+
+@media (max-width: 767px) and (orientation: portrait) {
+  #rotate-message {
+    display: block;
+  }
+}
