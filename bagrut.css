@@ -16,6 +16,7 @@
 }
 .bagrut-table th {
     background-color: #cce0ff; /* Light blue background for the header */
+    vertical-align: middle; /* Align headers vertically in the middle */
 }
 .table-input, .table-select {
     border-radius: 5px;
@@ -27,7 +28,7 @@
     border: 1px solid #ccc; /* Light red border for inputs */
     color: #00264d; /* Darker red text for inputs */
     padding: 5px; /* Add padding to create space */
-    margin: 0 5px; /* Add margin to create space around inputs */
+    margin: 0; /* Add margin to create space around inputs */
 }
 /* Remove arrows and center text in number inputs */
 .table-input[type="number"] {
