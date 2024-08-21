@@ -41,10 +41,11 @@ function adjustTableForMobile() {
 
     // Your code for mobile adjustments
     if (table) {
-        table.classList.add('shrink');
+        table.style.border = 'none'; // Temporarily remove borders
+        table.style.width = '100%'; // Reset width
         setTimeout(() => {
-            table.classList.remove('shrink');
-        }, 200); // Duration should match the CSS transition time
+            table.style.border = '2px solid #004080'; // Reapply borders
+        }, 0); // Apply immediately after removing borders
     }
 }
 
