@@ -33,6 +33,12 @@ const BagrutTableBody = document.getElementById('bagrut-table-body');
 // Function to create a table row
 function createBagrutRow(subject = '', units = 5, bonus = '', isNewRow = false) {
     let selectedOption = document.getElementById("bagrut-universities").value;
+
+    const table = document.querySelector('.bagrut-table');
+    table.style.display = 'none'; // Hide the table
+    table.offsetHeight; // Trigger reflow
+    table.style.display = ''; // Show the table
+    
     const row = document.createElement('tr');
 
     const subjectCell = document.createElement('td');
