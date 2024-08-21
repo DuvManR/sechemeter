@@ -107,8 +107,8 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #00264d;
-  color: rgb(204, 224, 255);
+  background-color: var(--primary-color); /* Light red background for add button */
+  color: #ffffff; /* White text color */
   border: none;
   border-radius: 50%;
   width: 30px;
