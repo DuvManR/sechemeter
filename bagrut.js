@@ -35,9 +35,10 @@ function createBagrutRow(subject = '', units = 5, bonus = '', isNewRow = false) 
     let selectedOption = document.getElementById("bagrut-universities").value;
 
     const table = document.querySelector('.bagrut-table');
-    table.style.display = 'none'; // Hide the table
+    // Force a reflow without affecting visibility
+    table.style.visibility = 'hidden'; // Temporarily hide visibility
     table.offsetHeight; // Trigger reflow
-    table.style.display = ''; // Show the table
+    table.style.visibility = ''; // Restore visibility
     
     const row = document.createElement('tr');
 
