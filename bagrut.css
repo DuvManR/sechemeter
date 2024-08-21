@@ -19,6 +19,10 @@
 .bagrut-table th {
     background-color: #cce0ff; /* Light blue background for the header */
 }
+.bagrut-table tr {
+    transform: translateZ(0); /* Trigger a repaint */
+}
+
 .table-input, .table-select {
     border-radius: 5px;
     width: calc(100% - 10px); /* Reduce width to add space */
