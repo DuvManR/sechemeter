@@ -8,15 +8,14 @@
     direction: rtl;
 }
 .bagrut-table {
-    visibility: visible;
-    transition: visibility 0s, opacity 0.2s ease;
-    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.2s ease;
 }
 
-.bagrut-table.hidden {
-    visibility: hidden;
-    opacity: 0;
+.bagrut-table.shrink {
+    transform: scale(0.95);
 }
+
 
 
 .bagrut-table th, .bagrut-table td {
