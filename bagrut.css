@@ -7,17 +7,6 @@
     background-color: #ffffff; /* White background for the table */
     direction: rtl;
 }
-.bagrut-table {
-    transform: scale(1);
-    transition: transform 0.2s ease;
-}
-
-.bagrut-table.shrink {
-    transform: scale(0.95);
-}
-
-
-
 .bagrut-table th, .bagrut-table td {
     border: none; /* Remove vertical lines */
     padding: 10px;
