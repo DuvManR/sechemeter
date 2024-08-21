@@ -35,11 +35,11 @@ function createBagrutRow(subject = '', units = 5, bonus = '', isNewRow = false) 
     let selectedOption = document.getElementById("bagrut-universities").value;
 
     const table = document.querySelector('.bagrut-table');
-    // Trigger a reflow in the next animation frame
+     // Force a reflow with minimal disruption
     requestAnimationFrame(() => {
-        table.style.display = 'none'; // Hide the table
+        table.style.opacity = '0'; // Fade out
         requestAnimationFrame(() => {
-            table.style.display = ''; // Show the table
+            table.style.opacity = '1'; // Fade in
         });
     });
     
