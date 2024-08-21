@@ -41,13 +41,10 @@ function adjustTableForMobile() {
 
     // Your code for mobile adjustments
     if (table) {
-        // Force a reflow with minimal disruption
-        requestAnimationFrame(() => {
-            table.style.opacity = '0'; // Fade out
-            requestAnimationFrame(() => {
-                table.style.opacity = '1'; // Fade in
-            });
-        });
+        table.classList.add('hidden');
+        setTimeout(() => {
+            table.classList.remove('hidden');
+        }, 200); // Duration should match the CSS transition time
     }
 }
 
