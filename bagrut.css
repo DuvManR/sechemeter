@@ -120,6 +120,10 @@
   font-size: 20px;
 }
 
+#rotate-message p {
+  margin-top: 20px; /* Adjust this value to move the text higher */
+}
+
   #lottie-animation {
     width: 100px;
     height: 100px;
@@ -130,6 +134,5 @@
   @media (max-width: 767px) and (orientation: portrait) {
     #rotate-message {
       display: flex;
-      margin-top: 20px; /* Adjust this value to move the text higher */
     }
   }
