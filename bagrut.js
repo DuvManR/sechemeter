@@ -53,9 +53,9 @@ function adjustTableForMobile() {
 function createBagrutRow(subject = '', units = 5, bonus = '', isNewRow = false) {
     let selectedOption = document.getElementById("bagrut-universities").value;
     
-    // if (isMobile()) {
-    //     adjustTableForMobile();    
-    // }
+    if (isMobile()) {
+        adjustTableForMobile();    
+    }
     
     const row = document.createElement('tr');
 
