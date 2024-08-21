@@ -7,6 +7,18 @@
     background-color: #ffffff; /* White background for the table */
     direction: rtl;
 }
+.bagrut-table {
+    visibility: visible;
+    transition: visibility 0s, opacity 0.2s ease;
+    opacity: 1;
+}
+
+.bagrut-table.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
 .bagrut-table th, .bagrut-table td {
     border: none; /* Remove vertical lines */
     padding: 10px;
