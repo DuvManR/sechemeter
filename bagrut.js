@@ -596,3 +596,8 @@ var animation = lottie.loadAnimation({
   animation.addEventListener('error', function(e) {
       console.error('Lottie animation error:', e);
   });
+
+// Close button functionality
+  document.getElementById('close-button').addEventListener('click', function() {
+      document.getElementById('rotate-message').style.display = 'none';
+  });
