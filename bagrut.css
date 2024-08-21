@@ -90,9 +90,9 @@
     padding: 10px;
     text-align: center;
     font-size: 16px;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
     z-index: 1000;
   }
