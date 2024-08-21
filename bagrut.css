@@ -1,0 +1,137 @@
+.bagrut-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Fix the table layout to prevent overlap */
+    overflow-wrap: break-word; /* Wrap long words within cells */
+    border: 2px solid #004080; /* Red border around the entire table */
+    background-color: #ffffff; /* White background for the table */
+}
+.bagrut-table th, .bagrut-table td {
+    border: none; /* Remove vertical lines */
+    padding: 10px;
+    text-align: center;
+    color: #00264d; /* Darker red text */
+    min-width: 100px; /* Set a minimum width for cells */
+    word-wrap: break-word; /* Ensure long words wrap within cells */
+}
+.bagrut-table th {
+    background-color: #cce0ff; /* Light blue background for the header */
+    vertical-align: middle; /* Align headers vertically in the middle */
+}
+.table-input, .table-select {
+    border-radius: 5px;
+    text-align: right;
+    width: calc(100% - 10px); /* Reduce width to add space */
+    box-sizing: border-box;
+    text-align: center;
+    /* border: 1px solid #66a3ff; Light red border for inputs */
+    border: 1px solid #ccc; /* Light red border for inputs */
+    color: #00264d; /* Darker red text for inputs */
+    padding: 5px; /* Add padding to create space */
+    margin: 0; /* Add margin to create space around inputs */
+}
+/* Remove arrows and center text in number inputs */
+.table-input[type="number"] {
+    -moz-appearance: textfield; /* Remove the arrows in Firefox */
+    appearance: textfield; /* Remove the arrows in other browsers */
+    text-align: center; /* Center the text */
+    padding: 5px 0; /* Adjust padding to center content */
+}
+.table-input[type="number"]::-webkit-outer-spin-button,
+.table-input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Remove the arrows in Firefox */
+    margin: 0;
+}
+
+.subject-input {
+    background-color: #ffffff; /* White background for subject input */
+}
+.delete-button {
+    background-color: var(--primary-color); /* Red background for delete button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#add-row-button {
+    background-color: var(--primary-color); /* Light red background for add button */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    width: 150px; /* Set a specific width to align with the column */
+    margin: 20px auto; /* Center horizontally and space from the table */
+}
+
+#add-row-button:hover, .delete-button:hover, .switch-frame-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+#bagrut-result {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#rotate-message {
+    display: none;
+    background-color: rgb(204, 224, 255, 0.5); /* Light blue background for the header */
+    color: #00264d; /* Darker red text */
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;      
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Close button styles */
+#close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #721c24;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#rotate-message p {
+  margin-top: 20px; /* Adjust this value to move the text higher */
+}
+
+#lottie-animation {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+    #rotate-message {
+      display: flex;
+    }
+}
