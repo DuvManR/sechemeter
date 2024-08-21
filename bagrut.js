@@ -30,18 +30,34 @@ const biuBigBonusSubjects = [...generalBigBonusSubjects, ...compSci, ...toshba, 
 // Reference to the bagrut table body
 const BagrutTableBody = document.getElementById('bagrut-table-body');
 
+function isMobile() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+// Code to run only on mobile devices
+// Example: handle table resizing
+function adjustTableForMobile() {
+    const table = document.querySelector('.bagrut-table');
+
+    // Your code for mobile adjustments
+    if (table) {
+        // Force a reflow with minimal disruption
+        requestAnimationFrame(() => {
+            table.style.opacity = '0'; // Fade out
+            requestAnimationFrame(() => {
+                table.style.opacity = '1'; // Fade in
+            });
+        });
+    }
+}
+
 // Function to create a table row
 function createBagrutRow(subject = '', units = 5, bonus = '', isNewRow = false) {
     let selectedOption = document.getElementById("bagrut-universities").value;
-
-    const table = document.querySelector('.bagrut-table');
-     // Force a reflow with minimal disruption
-    requestAnimationFrame(() => {
-        table.style.opacity = '0'; // Fade out
-        requestAnimationFrame(() => {
-            table.style.opacity = '1'; // Fade in
-        });
-    });
+    
+    if (isMobile()) {
+        adjustTableForMobile();    
+    }
     
     const row = document.createElement('tr');
 
