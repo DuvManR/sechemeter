@@ -41,9 +41,9 @@ function adjustTableForMobile() {
 
     // Your code for mobile adjustments
     if (table) {
-        table.classList.add('hidden');
+        table.classList.add('shrink');
         setTimeout(() => {
-            table.classList.remove('hidden');
+            table.classList.remove('shrink');
         }, 200); // Duration should match the CSS transition time
     }
 }
