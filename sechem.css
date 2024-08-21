@@ -39,6 +39,8 @@
 
             justify-content: center;  /* Center content vertically */
             height: auto;  /* Adjust as necessary */
+
+            transform: translateZ(0);
         }
 
         button {
