@@ -142,8 +142,7 @@
     cursor: pointer;
     font-size: 20px;
     z-index: 1001; /* Ensure it's above other elements */
-    transition: all 0.3s ease-in-out; /* Smooth transition */
-
+    will-change: transform; /* Hint to the browser to optimize animations */
 }
 
 /* Sticky positioning for the animation and text */
@@ -156,22 +155,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out; /* Smooth transition for content */
+    will-change: transform; /* Hint to the browser to optimize animations */
 }
 
 #rotate-message p {
-    argin-top: 10px; /* Adjust this value to move the text higher */
-    position: relative; /* Center the text in the middle of the screen */
-    z-index: 1001; /* Keep it above other elements */
+    margin-top: 10px; /* Adjust this value to move the text higher */
 }
 
 #lottie-animation {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
-    position: relative;
-    z-index: 1001; /* Ensure the animation stays above other elements */
-    transition: all 0.3s ease-in-out; /* Smooth transition for the animation */
 }
 
 @media (max-width: 767px) and (orientation: portrait) {
