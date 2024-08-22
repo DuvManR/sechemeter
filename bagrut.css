@@ -126,7 +126,7 @@
 /* Sticky positioning for the animation and text */
 #rotate-message-content-container {
     position: fixed;
-    top: 30%;
+    top: 40%;
 /*     transform: translateY(-50%); */
     display: flex;
     flex-direction: column;
@@ -138,7 +138,7 @@
 #close-button {
     position: fixed;
     top: 5%;
-    right: 5%;
+    right: 2.5%;
     margin-left: auto; /* Align to the right within the container */
 /*     margin-right: 10px; */
     background-color: var(--primary-color); /* Light red background for add button */
