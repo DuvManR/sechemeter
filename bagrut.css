@@ -121,6 +121,7 @@
     align-items: center;
     text-align: center;      
     flex-direction: column; /* Stack items vertically */
+    will-change: transform
 }
 
 /* Close button styles */
