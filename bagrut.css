@@ -120,8 +120,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;      
-    flex-direction: column; /* Stack items vertically */
-    will-change: transform
+    flex-direction: column; /* Stack items vertically */ 
 }
 
 /* Close button styles */
@@ -140,6 +139,16 @@
   align-items: center;
   cursor: pointer;
   font-size: 20px;
+  z-index: 1001; /* Ensure it's above other elements */
+}
+
+/* Sticky positioning for the animation and text */
+#rotate-message-content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #rotate-message p {
