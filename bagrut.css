@@ -136,7 +136,7 @@
 
 /* Close button styles */
 #close-button {
-    position: fixed;
+    position: sticky;
     top: 5%;
     right: 2.5%;
     margin-left: auto; /* Align to the right within the container */
