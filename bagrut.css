@@ -163,9 +163,11 @@
 }
 
 #lottie-animation {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    position: sticky;
+    transform: translateY(-50%);
+    margin-bottom: 10px;
 }
 
 @media (max-width: 767px) and (orientation: portrait) {
