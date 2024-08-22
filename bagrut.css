@@ -156,6 +156,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-in-out; /* Smooth transition for content */
 }
 
 #rotate-message p {
@@ -170,6 +171,7 @@
     margin-bottom: 10px;
     position: relative;
     z-index: 1001; /* Ensure the animation stays above other elements */
+    transition: all 0.3s ease-in-out; /* Smooth transition for the animation */
 }
 
 @media (max-width: 767px) and (orientation: portrait) {
