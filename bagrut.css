@@ -125,7 +125,7 @@
 
 /* Sticky positioning for the animation and text */
 #rotate-message-content-container {
-    position: sticky;
+    position: fixed;
     top: 10px;
 /*     transform: translateY(-50%); */
     display: flex;
@@ -136,7 +136,7 @@
 
 /* Close button styles */
 #close-button {
-    position: sticky;
+    position: fixed;
     top: 0;
 /*     right: 10px; */
     margin-left: auto; /* Align to the right within the container */
