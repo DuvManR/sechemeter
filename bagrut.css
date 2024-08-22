@@ -125,7 +125,7 @@
 
 /* Close button styles */
 #close-button {
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
     margin-left: auto; /* Align to the right within the container */
@@ -142,12 +142,12 @@
     cursor: pointer;
     font-size: 20px;
     z-index: 1001; /* Ensure it's above other elements */
-    will-change: transform; /* Hint to the browser to optimize animations */
+    transition: transform 0.3s ease-out; /* Smooth transition */
 }
 
 /* Sticky positioning for the animation and text */
 #rotate-message-content-container {
-    position: fixed; /* Fixed positioning to center on the screen */
+    position: absolute; /* Fixed positioning to center on the screen */
     top: 50%; /* Position at the vertical center */
     left: 50%; /* Position at the horizontal center */
     transform: translate(-50%, -50%); /* Offset by 50% to center completely */
@@ -155,7 +155,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    will-change: transform; /* Hint to the browser to optimize animations */
+    transition: transform 0.3s ease-out; /* Smooth transition */
 }
 
 #rotate-message p {
@@ -166,6 +166,7 @@
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease-out; /* Smooth transition */
 }
 
 @media (max-width: 767px) and (orientation: portrait) {
