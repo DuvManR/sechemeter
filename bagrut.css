@@ -138,11 +138,11 @@
 
 /* Close button styles */
 #close-button {
-    position: absolute; /* Keeps the button fixed in the viewport */
-    top: 5px; /* Keep it at the top right corner */
-    right: 5px;
-    background-color: var(--primary-color); /* Primary color */
-    color: #ffffff; /* White text color */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary-color); 
+    color: #ffffff; 
     border: none;
     border-radius: 50%;
     width: 30px;
@@ -152,9 +152,7 @@
     align-items: center;
     cursor: pointer;
     font-size: 20px;
-    z-index: 1001; /* Ensure it's above other elements */
-    max-width: 5%; /* Ensure it scales down on zoom */
-    max-height: 5%;
+    z-index: 1001; 
 }
 
 #rotate-message p {
