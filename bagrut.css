@@ -138,14 +138,12 @@
 
 /* Close button styles */
 #close-button {
-    position: fixed;
-    top: 5%;
-    right: 2.5%;
-/*     top: 10px;
-    right: 10px; */
-    margin-left: auto; /* Align to the right within the container */
-/*     margin-right: 10px; */
-    background-color: var(--primary-color); /* Light red background for add button */
+/*     top: 5%;
+    right: 2.5%; */
+    position: fixed; /* Keeps the button fixed in the viewport */
+    top: 10px; /* Position it 10px from the top of the viewport */
+    right: 10px; /* Position it 10px from the right of the viewport */
+    background-color: var(--primary-color); /* Primary color */
     color: #ffffff; /* White text color */
     border: none;
     border-radius: 50%;
