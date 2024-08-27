@@ -141,8 +141,8 @@
 /*     top: 5%;
     right: 2.5%; */
     position: fixed; /* Keeps the button fixed in the viewport */
-    top: 10px; /* Position it 10px from the top of the viewport */
-    right: 10px; /* Position it 10px from the right of the viewport */
+    top: 2vh; /* Position it relative to the viewport height */
+    right: 2vw; /* Position it relative to the viewport width */
     background-color: var(--primary-color); /* Primary color */
     color: #ffffff; /* White text color */
     border: none;
