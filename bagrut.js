@@ -626,3 +626,27 @@ var animation = lottie.loadAnimation({
   document.getElementById('close-button').addEventListener('click', function() {
     document.getElementById('rotate-message').style.display = 'none';
 });
+
+function adjustCloseButtonPosition() {
+    const closeButton = document.getElementById('close-button');
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // Get the current top and right position as percentages of the viewport
+    const topPosition = parseInt(closeButton.style.top) || 10;
+    const rightPosition = parseInt(closeButton.style.right) || 10;
+
+    // Calculate new top and right values based on viewport size
+    const newTop = Math.min(viewportHeight - closeButton.offsetHeight, topPosition);
+    const newRight = Math.min(viewportWidth - closeButton.offsetWidth, rightPosition);
+
+    closeButton.style.top = `${newTop}px`;
+    closeButton.style.right = `${newRight}px`;
+}
+
+// Call adjustCloseButtonPosition when the window is resized or zoomed
+window.addEventListener('resize', adjustCloseButtonPosition);
+window.addEventListener('scroll', adjustCloseButtonPosition);
+
+// Initial call to position the button correctly
+adjustCloseButtonPosition();
