@@ -141,8 +141,9 @@
 /*     top: 5%;
     right: 2.5%; */
     position: fixed; /* Keeps the button fixed in the viewport */
-    top: 2vh; /* Position it relative to the viewport height */
-    right: 2vw; /* Position it relative to the viewport width */
+    top: 1%; /* Position it relative to the viewport height */
+    right: 1%; /* Position it relative to the viewport width */
+    transform: translate(-50%, 0); /* Ensure the button stays within the viewport when zooming */
     background-color: var(--primary-color); /* Primary color */
     color: #ffffff; /* White text color */
     border: none;
