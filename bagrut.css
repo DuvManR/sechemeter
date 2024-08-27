@@ -138,7 +138,7 @@
 
 /* Close button styles */
 #close-button {
-    position: fixed; /* Keeps the button fixed in the viewport */
+    position: absolute; /* Keeps the button fixed in the viewport */
     top: 5px; /* Keep it at the top right corner */
     right: 5px;
     background-color: var(--primary-color); /* Primary color */
