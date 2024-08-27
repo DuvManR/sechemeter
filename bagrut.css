@@ -138,11 +138,11 @@
 
 /* Close button styles */
 #close-button {
-    position: sticky;
-/*     top: 5%;
-    right: 2.5%; */
-    top: 10px;
-    right: 10px;
+    position: fixed;
+    top: 5%;
+    right: 2.5%;
+/*     top: 10px;
+    right: 10px; */
     margin-left: auto; /* Align to the right within the container */
 /*     margin-right: 10px; */
     background-color: var(--primary-color); /* Light red background for add button */
