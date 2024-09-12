@@ -1,0 +1,172 @@
+.bagrut-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed; /* Fix the table layout to prevent overlap */
+	overflow-wrap: break-word;
+	border: 2px solid #004080;
+	background-color: #ffffff;
+	direction: rtl;
+}
+
+.bagrut-table th,
+.bagrut-table td {
+	border: none; /* Remove vertical lines */
+	padding: 10px;
+	text-align: center;
+	color: #00264d;
+	min-width: 100px; /* Set a minimum width for cells */
+	word-wrap: break-word;
+	vertical-align: middle; /* Align headers vertically in the middle */
+}
+
+.bagrut-table th {
+	background-color: #cce0ff;
+}
+
+.table-input,
+.table-select {
+	border-radius: 5px;
+	width: calc(100% - 10px); /* Reduce width to add space */
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	color: #00264d;
+	padding: 5px;
+	margin: 0;
+}
+
+.table-select {
+	text-align: right;
+	text-align-last: center; /* Center the last line of the text in the dropdown */
+	width: 100%;
+}
+
+/* Right-align the options in the dropdown list */
+.table-select option {
+	text-align: right; /* Right-align text within options */
+	direction: rtl; /* Ensure right-to-left text direction for options */
+}
+
+.table-input[type="number"] {
+	-moz-appearance: textfield; /* Remove the arrows in Firefox */
+	appearance: textfield; /* Remove the arrows in other browsers */
+	text-align: center;
+	padding: 5px 0;
+}
+
+.table-input[type="number"]::-webkit-outer-spin-button,
+.table-input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none; /* Remove the arrows in Firefox */
+	margin: 0;
+}
+
+.delete-button {
+	background-color: var(--primary-color);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+	display: inline-block; /* Ensure it is inline-block for better alignment */
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.bagrut-table td:last-child .delete-button {
+	/* Additional specific styling for the delete button in the last cell */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#add-row-button {
+	background-color: var(--primary-color);
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	display: block;
+	width: 150px;
+	margin: 20px auto;
+}
+
+#add-row-button:hover,
+.delete-button:hover,
+.switch-frame-button:hover {
+	background-color: var(--secondary-color);
+	transform: translateY(-2px);
+}
+
+#bagrut-results {
+	background-color: #f9f9f9;
+	margin: 10px 0;
+	margin-top: 10px;
+	border-radius: 4px;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+#rotate-message {
+	display: none;
+	background-color: rgb(204, 224, 255, 0.5);
+	color: #00264d;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95.5%;
+	height: 98.25%;
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column; /* Stack items vertically */
+}
+
+#rotate-message-content-container {
+	position: fixed;
+	top: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#close-button {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	margin-left: auto;
+	background-color: var(--primary-color);
+	color: #ffffff;
+	border: none;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 20px;
+	z-index: 1001; /* Ensure it's above other elements */
+}
+
+#rotate-message p {
+	margin-top: 10px;
+}
+
+#lottie-animation {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+	#rotate-message {
+		display: flex;
+	}
+}
