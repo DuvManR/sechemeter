@@ -73,16 +73,9 @@ export const calculateTauFinal = function (firstSechem, mor) {
 		displayInvalidInputs();
 	} else {
 		let finalSechem = roundDigits(
-			firstSechem * -217.5433682591282 +
-				-58.42129621919461 * mor +
-				0.27388137379660643 * firstSechem ** 2 +
-				0.15398911079085498 * firstSechem * mor +
-				0.008012119671922571 * mor ** 2 +
-				-0.00011432216948037421 * firstSechem ** 3 +
-				-0.0001021724775966959 * firstSechem ** 2 * mor +
-				-5.663289087465273e-6 * firstSechem * mor ** 2 +
-				-5.636375838946606e-6 * mor ** 3 +
-				58044.38082450953,
+			firstSechem * 0.300337711643503 +
+				mor * 0.413478985356971 +
+				432.586534393924,
 			2
 		);
 
