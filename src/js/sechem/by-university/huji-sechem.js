@@ -73,7 +73,7 @@ export const calculateHujiFinal = function (cognitive, morkam) {
 		displayInvalidInputs();
 	} else {
 		// Mor/Mirkam Standardization (Tiknun) -->
-		let normalizedMorkam = 0.0261 * morkam + 20.6791;
+		let normalizedMorkam = 0.0269 * morkam + 20.5063;
 
 		// Personal Grade (Tziun Ishiuty): -->
 		let finalSechem =
