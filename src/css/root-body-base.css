@@ -1,0 +1,21 @@
+:root {
+	--primary-color: #4caf50;
+	--secondary-color: #45a049;
+	--table-border-color: #388e3c;
+	--table-text-color: #1b5e20;
+	--table-th-color: #4caf50;
+	--table-lines-color: #81c784;
+	--font-family: "Roboto", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	min-height: 100vh;
+	font-family: var(--font-family);
+	color: #333;
+	background-color: #f0f0f0;
+	overflow-y: auto; /* Allow vertical scrolling */
+}

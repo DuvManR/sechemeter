@@ -1,0 +1,25 @@
+.sechem-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed; /* Fix the table layout to prevent overlap */
+	overflow-wrap: break-word;
+	border: 2px solid var(--table-border-color);
+	background-color: #ffffff;
+	direction: rtl;
+}
+
+.sechem-table th,
+.sechem-table td {
+	border: none; /* Remove vertical lines */
+	padding: 8px;
+	text-align: center;
+	color: var(--table-text-color);
+	min-width: 100px;
+	word-wrap: break-word;
+	border-bottom: 1px solid var(--table-lines-color);
+	border-right: 1px solid var(--table-th-color);
+}
+
+.sechem-table th {
+	background-color: var(--table-th-color);
+}

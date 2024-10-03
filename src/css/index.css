@@ -1,0 +1,17 @@
+@import "root-body-base.css";
+@import "container.css";
+@import "buttons.css";
+@import "input.css";
+@import "label.css";
+@import "select.css";
+@import "img.css";
+@import "scrollbar.css";
+@import "toggle.css";
+@import "university-select.css";
+@import "results-div.css";
+@import "sechem-table.css";
+@import "loading-overlay.css";
+@import "mailto-paragraph.css";
+@import "bagrut-table.css";
+@import "rotate-message.css";
+@import "reference-text.css";
