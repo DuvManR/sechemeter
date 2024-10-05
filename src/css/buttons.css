@@ -1,0 +1,50 @@
+button {
+	background-color: var(--primary-color);
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	position: relative;
+	margin: 10px;
+	width: 100%;
+	text-align: center;
+	max-width: 480px;
+}
+
+button:hover {
+	background-color: var(--secondary-color);
+	transform: translateY(-2px);
+}
+
+button:active {
+	background-color: var(--secondary-color);
+	transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+	button {
+		width: 100%;
+		padding: 15px;
+	}
+}
+
+.switch-frame-button {
+	background-color: var(--primary-color);
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	display: block;
+	width: 150px;
+	margin-bottom: 30px;
+}
+
+.switch-frame-button:hover {
+	background-color: var(--secondary-color);
+	transform: translateY(-2px);
+}
