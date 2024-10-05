@@ -1,4 +1,0 @@
-select:focus {
-	outline: none;
-	border-color: var(--primary-color);
-}
