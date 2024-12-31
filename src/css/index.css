@@ -1,0 +1,619 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css);
+:root {
+	--primary-color: #4caf50;
+	--secondary-color: #45a049;
+	--table-border-color: #388e3c;
+	--table-text-color: #1b5e20;
+	--table-th-color: #4caf50;
+	--table-lines-color: #81c784;
+	--font-family: "Roboto", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	font-family: var(--font-family);
+	color: #333;
+	background-color: #f0f0f0;
+	overflow-y: auto; /* Allow vertical scrolling */
+	margin: 0;
+}
+
+html {
+	scroll-behavior: auto;
+}
+
+.container {
+	display: none;
+}
+
+.container.active {
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	padding-bottom: 0;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 600px;
+	margin: 20px auto;
+	position: relative;
+	justify-content: center;
+	height: auto;
+}
+
+button {
+	background-color: var(--primary-color);
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	position: relative;
+	margin: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center;
+	max-width: 480px;
+}
+
+button:hover {
+	background-color: var(--secondary-color);
+	transform: translateY(-2px);
+}
+
+button:active {
+	background-color: var(--secondary-color);
+	transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+	button {
+		width: 100%;
+		padding: 15px;
+	}
+}
+
+.switch-frame-button {
+	background-color: var(--primary-color);
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 20px;
+	cursor: pointer;
+	display: block;
+	width: 150px;
+	margin-bottom: 30px;
+}
+
+.switch-frame-button:hover {
+	background-color: var(--secondary-color);
+	transform: translateY(-2px);
+}
+
+input[type="number"],
+input[type="text"] {
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	transition: border-color 0.3s ease;
+	-moz-appearance: textfield; /* Remove the arrows in Firefox */
+	appearance: textfield; /* Remove the arrows in other browsers */
+	text-align: center;
+	padding: 10px 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="text"]::-webkit-outer-spin-button,
+input[type="text"]::-webkit-inner-spin-button {
+	-webkit-appearance: none; /* Remove the arrows in Firefox */
+	margin: 0;
+}
+
+input:focus {
+	outline: none;
+	border-color: var(--primary-color);
+}
+
+input {
+	position: relative;
+	margin: 10px;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	max-width: 480px;
+	direction: ltr;
+}
+
+label {
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 18px;
+}
+
+#sechem-table-label {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+select:focus {
+	outline: none;
+	border-color: var(--primary-color);
+}
+img {
+	margin-top: 30px;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+	height: 200px;
+	overflow: hidden;
+}
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--primary-color) #f0f0f0;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #f0f0f0;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+	border-radius: 10px;
+	border: 3px solid #f0f0f0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.toggle-container {
+	position: relative;
+	display: grid;
+	margin-bottom: 20px;
+	grid-template-columns: repeat(2, 1fr);
+	width: fit-content;
+	border: 3px solid var(--primary-color);
+	border-radius: 20px;
+	background: var(--primary-color);
+	font-size: 16px;
+	font-weight: bold;
+	color: var(--primary-color);
+	cursor: pointer;
+}
+.toggle-container::before {
+	content: "";
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	left: 0%;
+	border-radius: 20px;
+	background: white;
+	transition: all 0.3s;
+}
+.toggle-checkbox:checked + .toggle-container::before {
+	left: 50%;
+}
+.toggle-container div {
+	padding: 6px;
+	text-align: center;
+	z-index: 1;
+}
+.toggle-checkbox {
+	display: none;
+}
+.toggle-checkbox:checked + .toggle-container div:first-child {
+	color: white;
+	transition: color 0.3s;
+}
+.toggle-checkbox:checked + .toggle-container div:last-child {
+	color: var(--primary-color);
+	transition: color 0.3s;
+}
+.toggle-checkbox + .toggle-container div:first-child {
+	color: var(--primary-color);
+	transition: color 0.3s;
+}
+.toggle-checkbox + .toggle-container div:last-child {
+	color: white;
+	transition: color 0.3s;
+}
+
+.university-select {
+	cursor: pointer;
+	width: 100%;
+	padding: 10px;
+	font-family: var(--font-family);
+	border-radius: 4px;
+	margin-bottom: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+}
+
+.university-select-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.university-select-container select {
+	width: 30%;
+	max-width: 480px;
+}
+
+@media screen and (max-width: 768px) {
+	.university-select {
+		padding: 12px !important;
+		width: 50% !important;
+		text-align: center !important;
+		text-align-last: center !important;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+}
+#sechem-results {
+	margin-bottom: 30px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.results-div {
+	background-color: #f9f9f9;
+	margin: 10px 0;
+	margin-top: 10px;
+	border-radius: 4px;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #ddd;
+	animation: fadeIn 2s;
+	direction: rtl;
+}
+
+.sechem-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed; /* Fix the table layout to prevent overlap */
+	overflow-wrap: break-word;
+	border: 2px solid var(--table-border-color);
+	background-color: #ffffff;
+	direction: rtl;
+}
+
+.sechem-table th,
+.sechem-table td {
+	border: none; /* Remove vertical lines */
+	padding: 8px;
+	text-align: center;
+	color: var(--table-text-color);
+	min-width: 100px;
+	word-wrap: break-word;
+	border-bottom: 1px solid var(--table-lines-color);
+	border-right: 1px solid var(--table-th-color);
+}
+
+.sechem-table th {
+	background-color: var(--table-th-color);
+}
+
+#loading-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(
+		255,
+		255,
+		255,
+		0.9
+	); /* Semi-transparent background */
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.spinner {
+	border: 8px solid #f3f3f3; /* Light gray */
+	border-top: 8px solid var(--primary-color);
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.mailto-paragraph {
+	direction: rtl;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.bagrut-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed; /* Fix the table layout to prevent overlap */
+	overflow-wrap: break-word;
+	border: 2px solid #004080;
+	background-color: #ffffff;
+	direction: rtl;
+}
+
+.bagrut-table th,
+.bagrut-table td {
+	border: none; /* Remove vertical lines */
+	padding: 10px;
+	text-align: center;
+	color: #00264d;
+	min-width: 100px; /* Set a minimum width for cells */
+	word-wrap: break-word;
+	vertical-align: middle; /* Align headers vertically in the middle */
+}
+
+.bagrut-table th {
+	background-color: #cce0ff;
+}
+
+.table-input,
+.table-select {
+	border-radius: 5px;
+	width: calc(100% - 10px); /* Reduce width to add space */
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	color: #00264d;
+	padding: 5px;
+	margin: 0;
+}
+
+.table-select {
+	text-align: right;
+	text-align-last: center; /* Center the last line of the text in the dropdown */
+	width: 100%;
+}
+
+/* Right-align the options in the dropdown list */
+.table-select option {
+	text-align: right; /* Right-align text within options */
+	direction: rtl; /* Ensure right-to-left text direction for options */
+}
+
+.table-input[type="number"],
+.table-input[type="text"] {
+	-moz-appearance: textfield; /* Remove the arrows in Firefox */
+	appearance: textfield; /* Remove the arrows in other browsers */
+	text-align: center;
+	padding: 5px 0;
+}
+
+.table-input[type="number"]::-webkit-outer-spin-button,
+.table-input[type="number"]::-webkit-inner-spin-button,
+.table-input[type="text"]::-webkit-outer-spin-button,
+.table-input[type="text"]::-webkit-inner-spin-button {
+	-webkit-appearance: none; /* Remove the arrows in Firefox */
+	margin: 0;
+}
+
+.delete-button {
+	background-color: var(--primary-color);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	padding: 5px 10px;
+	cursor: pointer;
+	display: inline-block; /* Ensure it is inline-block for better alignment */
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.bagrut-table td:last-child .delete-button {
+	/* Additional specific styling for the delete button in the last cell */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#add-row-button {
+	background-color: var(--primary-color);
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 20px;
+	cursor: pointer;
+	display: block;
+	width: 150px;
+	margin: 20px auto;
+}
+
+#add-row-button:hover,
+.delete-button:hover {
+	background-color: var(--secondary-color);
+	transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+	.table-input,
+	.table-select {
+		width: 100% !important;
+		text-align: center !important;
+		text-align-last: center !important;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+
+	.bagrut-table th,
+	.bagrut-table td {
+		border: none !important; /* Remove vertical lines */
+		min-width: 150px !important;
+		font-size: 16px;
+		white-space: nowrap; /* Prevent wrapping */
+		overflow: hidden; /* Hide overflow content */
+		text-overflow: ellipsis; /* Show ellipsis for overflow text */
+	}
+}
+
+#rotate-message {
+	display: none;
+	background-color: rgb(204, 224, 255, 0.5);
+	color: #00264d;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95.5%;
+	height: 98.25%;
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column; /* Stack items vertically */
+}
+
+#rotate-message-content-container {
+	position: fixed;
+	top: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#close-button {
+	position: relative;
+	margin-top: 20px;
+	background-color: var(--primary-color);
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px; /* Rounded corners */
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+}
+
+#close-button::before {
+	content: "לחץ לסגירה"; /* Display the text inside the button */
+}
+
+#rotate-message p {
+	margin-top: 10px;
+}
+
+#lottie-animation {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+	#rotate-message {
+		display: flex;
+	}
+}
+.reference-text {
+	text-align: center;
+	margin-bottom: 10px; /* Add space between the link and the logo image */
+	font-size: 16px;
+	color: var(--primary-color); /* Use your primary color or a different one */
+	width: 100%;
+}
+
+.reference-text a {
+	text-decoration: none;
+	color: inherit; /* Inherit the color from the parent div */
+	font-weight: bold; /* Make the text bold */
+}
+
+.reference-text a:hover {
+	text-decoration: underline; /* Underline on hover */
+}
+.install-button {
+	height: 50px;
+	display: inline-block;
+	border: 3px solid var(--primary-color);
+	font-family: var(--font-family);
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	color: var(--primary-color);
+	overflow: hidden;
+	border-radius: 15px; /* Adjust the value for more or less rounding */
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 20px auto;
+}
+.install-button .icon {
+	margin-right: 6px;
+}
+.install-button .install-primary,
+.install-button .install-secondary {
+	display: block;
+	padding: 0 25px;
+	line-height: 50px;
+	transition: margin 0.4s;
+}
+.install-button .install-primary {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+.install-button:hover .install-primary {
+	margin-top: -50px;
+}
+
+@media (max-width: 768px) {
+	.install-button {
+		width: auto; /* Adjust to fit on smaller screens */
+		margin-bottom: 20px;
+	}
+}
+
+
+
