@@ -1,6 +1,6 @@
 # sechemeter
 Schamim Calculator Site
 
-version 4.6
+version 5.0.1
 
 https://duvmanr.github.io/sechemeter/
