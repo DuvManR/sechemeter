@@ -1,0 +1,357 @@
+<!-- BY DuvMan © -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SECHEMETER</title>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-5QKNS5PDS9"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-5QKNS5PDS9");
+		</script>
+		<link rel="stylesheet" href="./src/css/index.css" />
+		<link rel="icon" type="image/x-icon" href="./src/img/favicon.ico" />
+		<link rel="manifest" href="./src/json/manifest.json" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+	</head>
+
+	<body aria-busy="true">
+		<div id="loading-overlay" data-theme="green">
+			<div class="spinner"></div>
+		</div>
+
+		<div id="sechem-form" class="container active" data-theme="green">
+			<button
+				id="to-bagrut-button"
+				class="switch-frame-button"
+				title="לחץ למעבר למחשבון ממוצע בגרות"
+			>
+				למחשבון בגרות
+			</button>
+
+			<div class="choice-section">
+				<h2>מחשבון סכמים</h2>
+				<label for="sechem-switch" id="sechem-option-label"
+					>:שלב קבלה</label
+				>
+				<input
+					type="checkbox"
+					id="sechem-switch"
+					class="toggle-checkbox"
+				/>
+				<label for="sechem-switch" class="toggle-container">
+					<div>ראשוני</div>
+					<div>סופי</div>
+				</label>
+
+				<div class="select-container">
+					<select id="sechem-adminission-channels" class="top-select">
+						<option value="default-ac" selected>
+							בחירת אפיק קבלה
+						</option>
+						<option value="BAGRUT">בגרויות</option>
+						<option value="PREP">מכינה אקדמית</option>
+						<option value="PD">רקע אקדמי חלקי</option>
+						<option value="FD">רקע אקדמי מלא</option>
+						<option value="ALT">חלופות לציונים מחו"ל</option>
+						<option value="TZAMERET">צמרת (עתודה רפואית)</option>
+					</select>
+				</div>
+
+				<div class="select-container">
+					<select
+						id="sechem-universities"
+						class="bottom-select"
+					></select>
+				</div>
+
+				<div class="select-container">
+					<select
+						id="sechem-ex-info-select"
+						class="bottom-select"
+					></select>
+				</div>
+			</div>
+
+			<div class="calculate-section">
+				<h2 id="sechem-calc-header"></h2>
+				<label for="top-input" id="top-label">(? - ?)</label>
+				<input type="text" id="top-input" />
+				<label for="ext-top-input" id="ext-top-label"></label>
+				<input type="text" id="ext-top-input" />
+				<label for="bottom-input" id="bottom-label">(? - ?)</label>
+				<input type="text" id="bottom-input" />
+
+				<button id="calc-button" title="לחץ לחישוב הסכם">
+					<i class="fas fa-paper-plane"></i> חישוב סכם
+				</button>
+
+				<div id="sechem-results" class="results-div"></div>
+
+				<button
+					id="sechem-popup-dialog-button"
+					class="popup-dialog-button"
+					title="למידע נוסף על הליך המיון"
+				>
+					למידע ולתנאים נוספים
+				</button>
+				<div id="sechem-popup-dialog" class="popup-dialog hidden-mode">
+					<div class="popup-dialog-content">
+						<span
+							id="sechem-close-dialog-button"
+							class="close-popup-dialog-button"
+							>&times;</span
+						>
+						<h2 id="sechem-popup-dialog-h"></h2>
+						<p id="sechem-popup-dialog-text"></p>
+					</div>
+				</div>
+
+				<label id="sechem-table-label" style="display: none"
+					><u>טבלת סכמי עבר</u></label
+				>
+				<table
+					id="sechem-table"
+					class="sechem-table"
+					style="display: none"
+				>
+					<thead id="sechem-table-head"></thead>
+					<tbody id="sechem-table-body"></tbody>
+				</table>
+
+				<div class="image-container" id="sechem-logo-image">
+					<img
+						src="./src/img/default-uni.png"
+						width="200"
+						height="200"
+					/>
+				</div>
+
+				<a id="sechem-install-button" class="install-button" href="#">
+					<div class="install-primary">
+						<span class="icon fa fa-cloud"></span>
+						להורדת האפליקציה
+					</div>
+					<div class="install-secondary">
+						<span class="icon fa fa-solid fa-hdd"></span>
+						בחירה נבונה
+					</div>
+
+					<button
+						id="sechem-install-dialog-button"
+						class="popup-dialog-button install-info-button"
+						title="למידע נוסף על הליך ההורדה"
+					>
+						<div class="info"><i class="icon-info-sign"></i></div>
+					</button>
+					<div
+						id="sechem-install-dialog"
+						class="popup-dialog hidden-mode"
+					>
+						<div class="popup-dialog-content">
+							<span
+								id="sechem-install-close-dialog-button"
+								class="close-popup-dialog-button"
+								>&times;</span
+							>
+							<h2 id="sechem-install-dialog-h"></h2>
+							<p id="sechem-install-dialog-text"></p>
+						</div>
+					</div>
+				</a>
+
+				<p class="mailto-paragraph"></p>
+			</div>
+		</div>
+
+		<div id="bagrut-form" class="container" data-theme="blue">
+			<button
+				id="to-sechem-button"
+				class="switch-frame-button"
+				title="לחץ למעבר למחשבון סכם"
+			>
+				למחשבון סכם
+			</button>
+
+			<div class="choice-section">
+				<h2>מחשבון בגרויות</h2>
+
+				<div class="select-container">
+					<select id="bagrut-calc-select" class="top-select">
+						<option value="default-bagrut-calc" selected>
+							בחירת מחשבון בגרות
+						</option>
+						<option value="BAGRUT-AVG-CALC">ממוצע בגרות</option>
+						<option value="BAGRUT-SUBJECT-CALC">
+							ציון סופי במקצוע
+						</option>
+					</select>
+				</div>
+				<div class="select-container">
+					<select id="bagrut-educations" class="bottom-select">
+						<option value="default-education" selected>
+							בחירת סוג תעודת בגרות
+						</option>
+						<option value="STATE-EDUCATION">ממלכתי</option>
+					</select>
+					<select id="bagrut-subjects" class="bottom-select">
+						<option value="default-subject" selected>
+							בחירת מקצוע
+						</option>
+						<option value="HISTORY">היסטוריה</option>
+						<option value="BIBLE">תנ"ך</option>
+						<option value="LITERATURE">ספרות</option>
+						<option value="HEBREW">לשון</option>
+						<option value="CIVICS">אזרחות</option>
+						<option value="ENGLISH">אנגלית</option>
+						<option value="ENGLISH-NO-ORAL">
+							אנגלית - ללא בע"פ
+						</option>
+						<option value="MATH">מתמטיקה</option>
+						<option value="PHYSICS">פיזיקה</option>
+						<option value="CHEMISTRY">כימיה</option>
+						<option value="BIOLOGY">ביולוגיה</option>
+						<option value="GENERAL-SUBJECT">מקצוע מורחב אחר</option>
+					</select>
+				</div>
+				<div class="select-container">
+					<select
+						id="bagrut-universities-ex-info-select"
+						class="bottom-select"
+					></select>
+					<select
+						id="bagrut-subjects-ex-info-select"
+						class="bottom-select"
+					></select>
+				</div>
+			</div>
+
+			<div class="calculate-section">
+				<div
+					id="bagrut-default-calc-section"
+					class="section active"
+				></div>
+				<div id="bagrut-avg-calc-section" class="section">
+					<div id="rotate-message">
+						<div id="rotate-message-content-container">
+							<div id="lottie-animation"></div>
+							<p>מומלץ לשיפור החוויה</p>
+							<button id="close-button"></button>
+						</div>
+					</div>
+
+					<h2 id="bagrut-avg-calc-header"></h2>
+					<table class="bagrut-table">
+						<thead id="bagrut-table-head">
+							<tr>
+								<th>מקצוע</th>
+								<th>יחידות</th>
+								<th>ציון</th>
+								<th>סוג בחינה</th>
+								<th>בונוס</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="bagrut-table-body"></tbody>
+					</table>
+
+					<button id="add-row-button" title="לחץ להוספת מקצוע בחירה">
+						הוסף מקצוע
+					</button>
+				</div>
+
+				<div id="bagrut-subject-calc-section" class="section">
+					<h2 id="bagrut-subject-calc-header"></h2>
+					<div id="subject-inputs-container"></div>
+				</div>
+
+				<div id="bagrut-results" class="results-div"></div>
+
+				<button
+					id="bagrut-popup-dialog-button"
+					class="popup-dialog-button"
+					title="למידע נוסף על אופן חישוב הממוצע"
+				>
+					למידע ולתנאים נוספים
+				</button>
+				<div id="bagrut-popup-dialog" class="popup-dialog hidden-mode">
+					<div class="popup-dialog-content">
+						<span
+							id="bagrut-close-dialog-button"
+							class="close-popup-dialog-button"
+							>&times;</span
+						>
+						<h2 id="bagrut-popup-dialog-h"></h2>
+						<p id="bagrut-popup-dialog-text"></p>
+
+						<div class="reference-text">
+							<a
+								id="bagrut-ref"
+								href="https://example.com"
+								target="_blank"
+								style="display: none"
+								>לרשימת המקצועות המזכים בבונוס 🔗</a
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="image-container" id="bagrut-logo-image">
+					<img
+						src="./src/img/default-uni.png"
+						width="200"
+						height="200"
+					/>
+				</div>
+
+				<a id="bagrut-install-button" class="install-button" href="#">
+					<div class="install-primary">
+						<span class="icon fa fa-cloud"></span>
+						להורדת האפליקציה
+					</div>
+
+					<div class="install-secondary">
+						<span class="icon fa fa-solid fa-hdd"></span>
+						בחירה נבונה
+					</div>
+
+					<button
+						id="bagrut-install-dialog-button"
+						class="popup-dialog-button install-info-button"
+						title="למידע נוסף על הליך ההורדה"
+					>
+						<div class="info"><i class="icon-info-sign"></i></div>
+					</button>
+					<div
+						id="bagrut-install-dialog"
+						class="popup-dialog hidden-mode"
+					>
+						<div class="popup-dialog-content">
+							<span
+								id="bagrut-install-close-dialog-button"
+								class="close-popup-dialog-button"
+								>&times;</span
+							>
+							<h2 id="bagrut-install-dialog-h"></h2>
+							<p id="bagrut-install-dialog-text"></p>
+						</div>
+					</div>
+				</a>
+
+				<p class="mailto-paragraph"></p>
+			</div>
+		</div>
+
+		<script type="module" src="./src/js/main.js"></script>
+	</body>
+</html>
